@@ -10,7 +10,7 @@
     box-sizing: border-box;
 }
 
-body {
+body { 
     font-family: 'Raleway', sans-serif;
 }
 
@@ -132,7 +132,8 @@ header {
 }
 
 header .logo {
-    
+    position: relative;
+    left: 20px;
 }
 
 /* ==================================================
@@ -291,8 +292,12 @@ section div {
 .lateral-left {
     position: absolute;
     top: 0;
+    left: -50%;
+    transition: .4s;
+}
+
+aside p:hover .lateral-left {
     left: 0;
-    
 }
 
 .lateral-right {
