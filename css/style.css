@@ -192,13 +192,16 @@ aside p {
     BLOCS CONTENT
    ================================================== */
 
+section div {
+    background-size: cover;
+}
+
 #first-bloc {
     display: flex;
     height: 100vh;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-size: cover;
     background-image: url(../images/landing-video-first-frame.jpg);
 }
 
@@ -215,9 +218,28 @@ aside p {
     background-image: url(../images/logo-white.png);    
 }
 
-.test {
+[class*="bloc-"] {
     height: 100vh;
-    background-color: #654;
+}
+
+.bloc-1 {
+    background-image: url(../images/Home-ComeAsYouAre-min.jpg);
+}
+
+.bloc-2 {
+    background-image: url(../images/Home-NewHereV1-min.jpg);
+}
+
+.bloc-3 {
+    background-image: url(../images/Home-RootedInChristV1-min.jpg);
+}
+
+.bloc-4 {
+    background-image: url(../images/Home-CommitedToServiceV1-min.jpg);
+}
+
+.bloc-5 {
+    background-image: url(../images/Home-EventsV1-min.jpg);
 }
 
 /* ==================================================
