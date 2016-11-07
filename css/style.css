@@ -39,6 +39,11 @@ header, footer {
     height: 80px;
 }
 
+header {
+    justify-content: space-between;
+    position: fixed;
+}
+
 footer {
     position: fixed;
     bottom: 0;
@@ -116,6 +121,18 @@ h1, h2, p {
     NAVIGATION
    ================================================== */
 
+.flex-nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-square {
+    width: 80px;
+    min-width: 80px;
+    height: 80px;
+}
+
 nav ul li {
     display: inline;
     list-style: none;
@@ -150,6 +167,7 @@ aside {
 }
 
 aside p {
+    position: fixed;
     display: table;
     text-transform: uppercase;
     font-weight: 700;
@@ -161,12 +179,12 @@ aside p {
 }
 
 .side-left p {
-    transform: rotate(-90deg) translate( 35%,0);
+    transform: rotate(-90deg);
     
 }
 
 .side-right p {
-    transform: rotate(90deg) translate( -35%,0);
+    transform: rotate(90deg);
    
 }
 
@@ -176,14 +194,12 @@ aside p {
 
 #first-bloc {
     display: flex;
-    height: 80vh;
+    height: 100vh;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-size: cover;
     background-image: url(../images/landing-video-first-frame.jpg);
-    
-    background-position: 0 -1px; /* just to fix image bad quality */
 }
 
 #first-bloc * {
@@ -197,6 +213,11 @@ aside p {
     background-repeat: no-repeat;
     background-position: center 0;
     background-image: url(../images/logo-white.png);    
+}
+
+.test {
+    height: 100vh;
+    background-color: #654;
 }
 
 /* ==================================================
