@@ -16,10 +16,19 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'IM Fell French Canon', serif;
 }
 
+p {
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
 /* > taille des blocs et leur emplacement */
 
 .flexbox {
     display: flex;
+}
+
+#content {
+    width: 100%;
 }
 
 header, footer {
@@ -46,8 +55,49 @@ aside {
     min-width: 80px;
 }
 
-/* > couleurs des blocs */
+/* > couleurs */
 header, footer, aside {
+    background-color: #fff;
+}
+
+/* > couleurs textes de base */
+h1, h2, p {
+    color: #fff;
+}
+
+/* > buttons - separator */
+.btn-large, .btn-square {
+    padding: 20px 40px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    text-transform: uppercase;
+    font-size: 1.1em;
+    letter-spacing: 2px;
+    color: #fff;
+    transition: .2s;
+}
+
+.btn-square {
+    padding: 0;
+    width: 135px;
+    height: 135px;
+    text-align: center;
+    line-height: 135px;
+}
+
+.btn-large:hover, .btn-square:hover {
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+}
+
+.btn-large:focus, .btn-square:focus {
+    outline: 0;
+}
+
+.separator {
+    width: 100px;
+    height: 2px;
     background-color: #fff;
 }
 
@@ -107,7 +157,7 @@ aside p {
     letter-spacing: 2px;
     text-indent: 1em;
     white-space: nowrap;
-    
+    color: #000;
 }
 
 .side-left p {
@@ -118,6 +168,35 @@ aside p {
 .side-right p {
     transform: rotate(90deg) translate( -35%,0);
    
+}
+
+/* ==================================================
+    BLOCS CONTENT
+   ================================================== */
+
+#first-bloc {
+    display: flex;
+    height: 80vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-image: url(../images/landing-video-first-frame.jpg);
+    
+    background-position: 0 -1px; /* just to fix image bad quality */
+}
+
+#first-bloc * {
+    margin: 20px 0;
+}
+
+#first-bloc .logo {
+    width: 270px;
+    height: 45px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-image: url(../images/logo-white.png);    
 }
 
 /* ==================================================
