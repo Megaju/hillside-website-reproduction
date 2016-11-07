@@ -16,6 +16,12 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'IM Fell French Canon', serif;
 }
 
+h2 {
+    font-size: 4em;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
 p {
     font-weight: 600;
     letter-spacing: 2px;
@@ -83,6 +89,7 @@ h1, h2, p {
 }
 
 .btn-square {
+    margin-right: 100px;
     padding: 0;
     width: 135px;
     height: 135px;
@@ -222,25 +229,27 @@ section div {
     height: 100vh;
 }
 
-.bloc-1 {
-    background-image: url(../images/Home-ComeAsYouAre-min.jpg);
+[class*="bloc-"] p {
+    max-width: 50%;
+    line-height: 30px;
 }
 
-.bloc-2 {
-    background-image: url(../images/Home-NewHereV1-min.jpg);
+[class*="bloc-"] .flexbox {
+    height: 100%;
+    padding: 115px;
+    align-items: center;
 }
 
-.bloc-3 {
-    background-image: url(../images/Home-RootedInChristV1-min.jpg);
+[class*="bloc-"] .flexbox div:first-child * {
+    margin: 25px 0;
 }
 
-.bloc-4 {
-    background-image: url(../images/Home-CommitedToServiceV1-min.jpg);
+.shadow {
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
 }
 
-.bloc-5 {
-    background-image: url(../images/Home-EventsV1-min.jpg);
-}
+.bloc-1{background-image:url(../images/Home-ComeAsYouAre-min.jpg);}.bloc-2 {background-image:url(../images/Home-NewHereV1-min.jpg);}.bloc-3 {background-image:url(../images/Home-RootedInChristV1-min.jpg);}.bloc-4 {background-image:url(../images/Home-CommitedToServiceV1-min.jpg);}.bloc-5{background-image:url(../images/Home-EventsV1-min.jpg);}
 
 /* ==================================================
     FOOTER
