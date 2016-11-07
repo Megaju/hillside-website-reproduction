@@ -5,6 +5,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -86,6 +87,37 @@ nav ul li a {
 
 .nav-right ul li {
     margin-left: 64px;
+}
+
+/* ==================================================
+    ASIDES
+   ================================================== */
+
+aside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+aside p {
+    display: table;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: .9em;
+    letter-spacing: 2px;
+    text-indent: 1em;
+    white-space: nowrap;
+    
+}
+
+.side-left p {
+    transform: rotate(-90deg) translate( 35%,0);
+    
+}
+
+.side-right p {
+    transform: rotate(90deg) translate( -35%,0);
+   
 }
 
 /* ==================================================
