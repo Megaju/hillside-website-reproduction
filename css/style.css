@@ -1,3 +1,5 @@
+/* #0C7883 */
+
 /* ==================================================
     BASE
    ================================================== */
@@ -69,6 +71,7 @@ aside {
 /* > couleurs */
 header, footer, aside {
     background-color: #fff;
+    z-index: 8;
 }
 
 /* > couleurs textes de base */
@@ -124,6 +127,14 @@ h1, h2, p {
     background-image: url(../images/logo-header.png);
 }
 
+header {
+    text-align: center;
+}
+
+header .logo {
+    
+}
+
 /* ==================================================
     NAVIGATION
    ================================================== */
@@ -154,13 +165,26 @@ nav ul li a {
     text-transform: uppercase;
 }
 
+/*.nav-left {
+    float: left;
+}
+
+.nav-right {
+    float: right;
+}*/
+
 .nav-left ul li {
     margin-right: 64px;
 }
-
+.nav-left ul li:last-child {
+    margin-right: 0;
+}
 
 .nav-right ul li {
     margin-left: 64px;
+}
+.nav-right ul li:first-child {
+    margin-left: 0;
 }
 
 /* ==================================================
@@ -183,6 +207,7 @@ aside p {
     text-indent: 1em;
     white-space: nowrap;
     color: #000;
+    z-index: 10;
 }
 
 .side-left p {
@@ -250,6 +275,32 @@ section div {
 }
 
 .bloc-1{background-image:url(../images/Home-ComeAsYouAre-min.jpg);}.bloc-2 {background-image:url(../images/Home-NewHereV1-min.jpg);}.bloc-3 {background-image:url(../images/Home-RootedInChristV1-min.jpg);}.bloc-4 {background-image:url(../images/Home-CommitedToServiceV1-min.jpg);}.bloc-5{background-image:url(../images/Home-EventsV1-min.jpg);}
+
+/* ==================================================
+    PANNAUX LATERAUX
+   ================================================== */
+
+[class*="lateral-"] {
+    width: 50%;
+    height: 100vh;
+    z-index: 9;
+    opacity: .5;
+    background-color: #B6E0D8;
+}
+
+.lateral-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+}
+
+.lateral-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: orangered;
+}
 
 /* ==================================================
     FOOTER
