@@ -147,9 +147,12 @@ header .logo {
 }
 
 .nav-square {
+    position: relative;
     width: 80px;
     min-width: 80px;
     height: 80px;
+    background-color: #fff;
+    z-index: 3;
 }
 
 nav ul li {
@@ -350,4 +353,10 @@ aside p:hover .lateral-left {
 footer img {
     width: 21px;
     height: 9px;
+}
+
+#ancre:hover {
+    opacity: .5;
+    transition: .3s;
+    cursor: pointer;
 }
