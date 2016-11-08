@@ -166,14 +166,6 @@ nav ul li a {
     text-transform: uppercase;
 }
 
-/*.nav-left {
-    float: left;
-}
-
-.nav-right {
-    float: right;
-}*/
-
 .nav-left ul li {
     margin-right: 64px;
 }
@@ -186,6 +178,24 @@ nav ul li a {
 }
 .nav-right ul li:first-child {
     margin-left: 0;
+}
+
+/* --- menu supplémentaires --- */
+.flex-nav {
+    position: relative;
+    height: 80px;
+    align-items: center;
+    background-color: #fff;
+    z-index: 1;
+}
+
+.menu-plus {
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    background-color: #B6E0D8;
+    transition: .3s;
+    z-index: 0;
 }
 
 /* ==================================================
