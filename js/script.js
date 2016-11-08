@@ -9,10 +9,7 @@ $( document ).ready(function() {
         $(".menu-plus").css("top", "0"); 
     });
     
-// Scroll fluid des sections principales et modif des href
-    var currentSection = 0;
-    
-    // modif des liens en fonction du scroll
+    // scroll fluid des sections principales et modif des href
     $('#first-bloc').on('inview', function(event, isInView) {
         $("#ancre").attr("href", "#ancre1");
     });
@@ -28,15 +25,24 @@ $( document ).ready(function() {
     $('#ancre4').on('inview', function(event, isInView) {
         $("#ancre").attr("href", "#ancre5");
     });
+    $('#ancre5').on('inview', function(event, isInView) {
+        $("#ancre").attr("href", "#first-bloc");
+    });
         
+    /*$('#ancre').on('click', function() { // Au clic sur un élément
+		var page = $(this).attr('href'); // Page cible
+		var speed = 750; // Durée de l'animation (en ms)
+		$('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
+	});*/
     
-    
-    $('a[href^="#"]').click(function(){
-        var the_id = $(this).attr("href");
-        
-        $('html, body').animate({
-            scrollTop:$(the_id).offset().top
-        }, 'slow');
-        return false;
+    $(function () {
+        var $window = $(window);
+        $window.scroll(function () {
+            if ($window.scrollTop() == 0)
+                $("#ancre").css("transform", "scaleY(1)");
+            else if ($window.height() + $window.scrollTop() == $(document).height()) {
+                $("#ancre").css("transform", "scaleY(-1)");
+            }
+        });
     });
 });
