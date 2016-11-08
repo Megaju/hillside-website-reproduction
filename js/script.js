@@ -4,7 +4,7 @@ $( document ).ready(function() {
         $(".menu-plus").css("top", "80px"); 
     });
     
-    $(".nav-left ul li a").mouseleave(function(){
+    $("header").mouseleave(function(){
         $(".menu-plus").css("top", "0"); 
     });
 });

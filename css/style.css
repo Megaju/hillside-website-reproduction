@@ -164,6 +164,11 @@ nav ul li a {
     font-weight: 700;
     letter-spacing: 3px;
     text-transform: uppercase;
+    transition: .3s;
+}
+
+nav ul li a:hover {
+    color: #0C7883;
 }
 
 .nav-left ul li {
@@ -190,12 +195,33 @@ nav ul li a {
 }
 
 .menu-plus {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     position: absolute;
     width: 100%;
     height: 80px;
     background-color: #B6E0D8;
     transition: .3s;
     z-index: 0;
+}
+
+.menu-plus ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+.menu-plus ul li a {
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: .8em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #000;
+}
+
+.menu-plus ul li a:hover {
+    color: #0C7883;
 }
 
 /* ==================================================
