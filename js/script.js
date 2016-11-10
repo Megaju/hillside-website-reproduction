@@ -4,36 +4,85 @@ $( document ).ready(function() {
     $(".nav-left ul li a").hover(function(){
         $(".menu-plus").css("top", "80px"); 
     });
-    
     $("header").mouseleave(function(){
         $(".menu-plus").css("top", "0"); 
     });
     
-    // scroll fluid des sections principales et modif des href
-    $('#first-bloc').on('inview', function(event, isInView) {
-        $("#ancre").attr("href", "#ancre1");
+    // fonctions pour les liens
+    function hrefOne() {
+        $('footer a').css("display", "none");           
+        $('#href-1').css("display", "block");
+    };
+    function hrefTwo() {
+        $('footer a').css("display", "none");           
+        $('#href-2').css("display", "block"); 
+    };
+    function hrefThree() {
+        $('footer a').css("display", "none");           
+        $('#href-3').css("display", "block");
+    };
+    function hrefFour() {
+        $('footer a').css("display", "none");           
+        $('#href-4').css("display", "block");
+    };
+    function hrefFive() {
+        $('footer a').css("display", "none");           
+        $('#href-5').css("display", "block");           
+        $("#href-5").css("transform", "scaleY(-1)");
+    };
+    function hrefSix() {
+        $('footer a').css("display", "none");           
+        $('#href-0').css("display", "block"); 
+        $("#href-5").css("transform", "scaleY(1)");
+    };
+    
+    // scroll à la sourie ou pad
+    /*var lastScrollTop = 0;
+    
+    $(window).scroll(function(event){
+        var countScroll = 0;
+        var state = 0;
+        // event.stopPropagation();    
+        var st = $(this).scrollTop();
+        if (st > lastScrollTop && countScroll == 0){
+            // downscroll
+            $('#href-' + state).trigger('click');
+            countScroll++;
+            state++;
+            console.log('scroll down');
+        } else {
+            // upscroll
+            console.log('scroll up');
+        }
+        lastScrollTop = st;
+    });*/
+    
+    // scroll au click sur la flèche du footer
+    $('#href-0').on('click', function() {
+        hrefOne();       
     });
-    $('#ancre1').on('inview', function(event, isInView) {
-        $("#ancre").attr("href", "#ancre2");
+    $('#href-1').on('click', function() {
+         hrefTwo();         
     });
-    $('#ancre2').on('inview', function(event, isInView) {
-        $("#ancre").attr("href", "#ancre3");
+    $('#href-2').on('click', function() {
+         hrefThree();          
     });
-    $('#ancre3').on('inview', function(event, isInView) {
-        $("#ancre").attr("href", "#ancre4");
+    $('#href-3').on('click', function() {
+         hrefFour();          
     });
-    $('#ancre4').on('inview', function(event, isInView) {
-        $("#ancre").attr("href", "#ancre5");
+    $('#href-4').on('click', function() {
+        hrefFive();
     });
-    $('#ancre5').on('inview', function(event, isInView) {
-        $("#ancre").attr("href", "#first-bloc");
+    $('#href-5').on('click', function() {
+        hrefSix();
     });
-        
-    /*$('#ancre').on('click', function() { // Au clic sur un élément
-		var page = $(this).attr('href'); // Page cible
-		var speed = 750; // Durée de l'animation (en ms)
-		$('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
-	});*/
+    
+    // scroll fluide
+    $('footer a').on('click', function() {
+		var page = $(this).attr('href');
+		var speed = 750;
+		$('html, body').animate( { scrollTop: $(page).offset().top }, speed );
+	});
     
     $(function () {
         var $window = $(window);

@@ -268,7 +268,7 @@ section div {
     background-size: cover;
 }
 
-#first-bloc {
+#ancre0 {
     display: flex;
     height: 100vh;
     flex-direction: column;
@@ -277,11 +277,11 @@ section div {
     background-image: url(../images/landing-video-first-frame.jpg);
 }
 
-#first-bloc * {
+#ancre0 * {
     margin: 20px 0;
 }
 
-#first-bloc .logo {
+#ancre0 .logo {
     width: 270px;
     height: 45px;
     background-size: contain;
@@ -355,8 +355,17 @@ footer img {
     height: 9px;
 }
 
-#ancre:hover {
+[id*="href-"] {
+    display: none;
+}
+
+#href-0 {
+    display: block;
+}
+
+[id*="href-"]:hover {
     opacity: .5;
     transition: .3s;
     cursor: pointer;
 }
+
