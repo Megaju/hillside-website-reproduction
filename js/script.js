@@ -31,9 +31,11 @@ $( document ).ready(function() {
     $('#menu').on('click', function() {
         if (menuRespOpacity === 0) {
             $('#responsive-menu').css("opacity", "1");
+            $('#menu').html("CLOSE");
             menuRespOpacity = 1;
         } else {
             $('#responsive-menu').css("opacity", "0");
+            $('#menu').html("MENU");
             menuRespOpacity = 0;
         }
     });
