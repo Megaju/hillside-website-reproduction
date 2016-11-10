@@ -11,6 +11,7 @@ $( document ).ready(function() {
     // gestion des panneaux latéraux
     // GAUCHE
     $(".side-left p").hover(function(){
+        $('.lateral-left').css("position", "fixed");
         $('.lateral-left').css("left", "0");
     });
     $('.lateral-left').mouseleave(function(){
@@ -18,6 +19,7 @@ $( document ).ready(function() {
     });
     // DROITE
     $(".side-right p").hover(function(){
+        $('.lateral-right').css("position", "fixed");
         $('.lateral-right').css("right", "0");
     });
     $('.lateral-right').mouseleave(function(){

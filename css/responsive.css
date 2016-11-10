@@ -1,0 +1,12 @@
+@media (max-width: 1045px) {
+    .logo {
+        float: left;
+        width: 24px;
+        height: 29px;
+        background-image: url(../images/logo-mobile.png);
+    }
+    
+    aside {
+        display: none;
+    }
+}

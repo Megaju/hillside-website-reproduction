@@ -337,6 +337,10 @@ section div {
     left: -50%;
 }
 
+.side-left p {
+    z-index: 10;
+}
+
 aside p:hover {
     cursor: default;
 }
