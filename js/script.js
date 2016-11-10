@@ -9,12 +9,20 @@ $( document ).ready(function() {
     });
     
     // gestion des panneaux latéraux
+    // GAUCHE
     $(".side-left p").hover(function(){
         $('.lateral-left').css("left", "0");
     });
     $('.lateral-left').mouseleave(function(){
         $('.lateral-left').css("left", "-50%");        
-    })
+    });
+    // DROITE
+    $(".side-right p").hover(function(){
+        $('.lateral-right').css("right", "0");
+    });
+    $('.lateral-right').mouseleave(function(){
+        $('.lateral-right').css("right", "-50%");        
+    });
     
     // fonctions pour les liens
     function hrefOne() {

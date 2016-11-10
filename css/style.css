@@ -12,6 +12,7 @@
 
 body { 
     font-family: 'Raleway', sans-serif;
+    overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -326,24 +327,23 @@ section div {
     z-index: 9;
     opacity: .5;
     background-color: #B6E0D8;
+    transition: .4s;
 }
 
 .lateral-left {
     position: absolute;
     top: 0;
     left: -50%;
-    transition: .4s;
 }
 
-aside p:hover .lateral-left {
-    left: 0;
+aside p:hover {
+    cursor: default;
 }
 
 .lateral-right {
     position: absolute;
     top: 0;
-    right: 0;
-    background-color: orangered;
+    right: -50%;
 }
 
 /* ==================================================
