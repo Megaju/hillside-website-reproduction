@@ -43,6 +43,7 @@
         background-color: #fff;
         opacity: 0;
         transition: .4s;
+        z-index: 2;
     }
     
     #responsive-menu ul {
