@@ -1,5 +1,22 @@
 
 $( document ).ready(function() {
+    // video 1er section                
+    $('.vide').vide({
+        ogv: 'videos/Hillside.ogv',
+        mp4: 'videos/Hillside.mp4'
+    }, {
+        volume: 1,
+        playbackRate: 1,
+        muted: true,
+        loop: true,
+        autoplay: true,
+        position: '50% 50%', // Similar to the CSS `background-position` property.
+        posterType: 'detect', // Poster image type. "detect" — auto-detection; "none" — no poster; "jpg", "png", "gif",... - extensions.
+        resizing: true, // Auto-resizing, read: https://github.com/VodkaBears/Vide#resizing
+        bgColor: 'transparent', // Allow custom background-color for Vide div,
+        className: 'video' // Add custom CSS class to Vide div
+    });
+                
     // menu déroulant top
     $(".nav-left ul li a").hover(function(){
         $(".menu-plus").css("top", "80px"); 
@@ -30,10 +47,12 @@ $( document ).ready(function() {
     var menuRespOpacity = 0;
     $('#menu').on('click', function() {
         if (menuRespOpacity === 0) {
+            $('body').css("overflow-y", "hidden");
             $('#responsive-menu').css("opacity", "1");
             $('#menu').html("CLOSE");
             menuRespOpacity = 1;
         } else {
+            $('body').css("overflow-y", "auto");
             $('#responsive-menu').css("opacity", "0");
             $('#menu').html("MENU");
             menuRespOpacity = 0;
