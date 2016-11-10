@@ -8,6 +8,14 @@ $( document ).ready(function() {
         $(".menu-plus").css("top", "0"); 
     });
     
+    // gestion des panneaux latéraux
+    $(".side-left p").hover(function(){
+        $('.lateral-left').css("left", "0");
+    });
+    $('.lateral-left').mouseleave(function(){
+        $('.lateral-left').css("left", "-50%");        
+    })
+    
     // fonctions pour les liens
     function hrefOne() {
         $('footer a').css("display", "none");           
@@ -94,4 +102,6 @@ $( document ).ready(function() {
             }
         });
     });
+
+
 });
