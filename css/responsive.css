@@ -1,4 +1,8 @@
-#menu {
+/* > blue : #B6E0D8
+ * > pink : #EED0B5
+ */
+
+#menu, #responsive-menu {
     display: none;
 }
 
@@ -7,8 +11,12 @@
         display: none;
     }
     
-    .flex-nav {
-        
+    .logo {
+        position: absolute;
+        left: 0;
+        width: 24px;
+        height: 29px;
+        background-image: url(../images/logo-mobile.png);
     }
     
     #menu {
@@ -25,12 +33,56 @@
         color: #0c7883;
     }
     
-    .logo {
-        position: absolute;
-        left: 0;
-        width: 24px;
-        height: 29px;
-        background-image: url(../images/logo-mobile.png);
+    #responsive-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: #fff;
+        opacity: 0;
+        transition: .4s;
+    }
+    
+    #responsive-menu ul {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    #responsive-menu ul li {
+        display: block;
+        font-size: 1.5em;
+    }
+    
+    #responsive-menu div {
+        display: flex;
+        width: 100%;
+    }
+    
+    [class*="resp-side-"] {
+        display: flex;
+        justify-content: center;
+        line-height: 80px;
+        height: 80px;
+    }
+    
+    [class*="resp-side-"] p {
+        text-align: center;
+        text-transform: uppercase;
+        color: #000;
+        font-size: .9em;
+    }
+    
+    .resp-side-left {
+        background-color: #b6e0d8;
+    }
+    
+    .resp-side-right {
+        background-color: #eed0b5;
     }
     
     section .logo {

@@ -26,6 +26,18 @@ $( document ).ready(function() {
         $('.lateral-right').css("right", "-50%");        
     });
     
+    // apparition du menu responsive
+    var menuRespOpacity = 0;
+    $('#menu').on('click', function() {
+        if (menuRespOpacity === 0) {
+            $('#responsive-menu').css("opacity", "1");
+            menuRespOpacity = 1;
+        } else {
+            $('#responsive-menu').css("opacity", "0");
+            menuRespOpacity = 0;
+        }
+    });
+    
     // fonctions pour les liens
     function hrefOne() {
         $('footer a').css("display", "none");           
